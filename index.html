@@ -44,51 +44,55 @@
             box-shadow: 0 20px 40px rgba(23, 46, 33, 0.08);
         }
 
-        /* Floating Element Keyframe Animations */
-        @keyframes float-top-left {
+        /* Wind Sway / Breeze Keyframe Animations */
+        @keyframes wind-top-left {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(-3px, -5px) rotate(-0.5deg); }
+            33% { transform: translate(-8px, 4px) rotate(-2.5deg); }
+            66% { transform: translate(3px, -3px) rotate(1deg); }
         }
 
-        @keyframes float-top-right {
+        @keyframes wind-top-right {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(4px, -3px) rotate(0.5deg); }
+            40% { transform: translate(6px, -5px) rotate(2deg); }
+            75% { transform: translate(-4px, 2px) rotate(-1deg); }
         }
 
-        @keyframes float-bottom-left {
+        @keyframes wind-bottom-left {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(-4px, 4px) rotate(-0.5deg); }
+            30% { transform: translate(-5px, 6px) rotate(-2deg); }
+            70% { transform: translate(4px, -3px) rotate(1.5deg); }
         }
 
-        @keyframes float-bottom-right {
+        @keyframes wind-bottom-right {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(3px, 5px) rotate(0.8deg); }
+            45% { transform: translate(8px, 5px) rotate(3deg); }
+            80% { transform: translate(-3px, -2px) rotate(-1deg); }
         }
 
-        @keyframes float-couple {
-            0%, 100% { transform: translate(-50%, 0); }
-            50% { transform: translate(-50%, -5px); }
+        @keyframes wind-couple {
+            0%, 100% { transform: translate(-50%, 0) rotate(0deg); }
+            50% { transform: translate(-50%, -6px) rotate(0.6deg); }
         }
 
-        /* Apply Animations */
+        /* Apply Animations with Organic Durations and Offsets */
         .anim-top-left {
-            animation: float-top-left 7s ease-in-out infinite;
+            animation: wind-top-left 10s ease-in-out infinite;
         }
 
         .anim-top-right {
-            animation: float-top-right 8s ease-in-out infinite;
+            animation: wind-top-right 12s ease-in-out infinite;
         }
 
         .anim-bottom-left {
-            animation: float-bottom-left 9s ease-in-out infinite;
+            animation: wind-bottom-left 11s ease-in-out infinite;
         }
 
         .anim-bottom-right {
-            animation: float-bottom-right 7.5s ease-in-out infinite;
+            animation: wind-bottom-right 9.5s ease-in-out infinite;
         }
 
         .anim-couple {
-            animation: float-couple 6s ease-in-out infinite;
+            animation: wind-couple 8s ease-in-out infinite;
         }
 
         /* Shimmer Effect on Buttons */
