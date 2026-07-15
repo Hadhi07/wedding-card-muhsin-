@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Wedding Invitation - Ayisha Sana & Muhammad Midlaj</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=Source+Serif+4:wght@400;600&family=Alex+Brush&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -32,67 +32,11 @@
             opacity: 0.35;
         }
 
-        /* Container Queries Setup */
-        .card-container {
-            container-type: inline-size;
-            position: relative;
-            background-image: url('invitation_bg_clean.png?v=3');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            aspect-ratio: 730 / 1024;
-            box-shadow: 0 20px 40px rgba(23, 46, 33, 0.08);
-        }
-
-        /* Wind Sway / Breeze Keyframe Animations */
-        @keyframes wind-top-left {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(-8px, 4px) rotate(-2.5deg); }
-            66% { transform: translate(3px, -3px) rotate(1deg); }
-        }
-
-        @keyframes wind-top-right {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            40% { transform: translate(6px, -5px) rotate(2deg); }
-            75% { transform: translate(-4px, 2px) rotate(-1deg); }
-        }
-
-        @keyframes wind-bottom-left {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            30% { transform: translate(-5px, 6px) rotate(-2deg); }
-            70% { transform: translate(4px, -3px) rotate(1.5deg); }
-        }
-
-        @keyframes wind-bottom-right {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            45% { transform: translate(8px, 5px) rotate(3deg); }
-            80% { transform: translate(-3px, -2px) rotate(-1deg); }
-        }
-
-        @keyframes wind-couple {
-            0%, 100% { transform: translate(-50%, 0) rotate(0deg); }
-            50% { transform: translate(-50%, -6px) rotate(0.6deg); }
-        }
-
-        /* Apply Animations with Organic Durations and Offsets */
-        .anim-top-left {
-            animation: wind-top-left 10s ease-in-out infinite;
-        }
-
-        .anim-top-right {
-            animation: wind-top-right 12s ease-in-out infinite;
-        }
-
-        .anim-bottom-left {
-            animation: wind-bottom-left 11s ease-in-out infinite;
-        }
-
-        .anim-bottom-right {
-            animation: wind-bottom-right 9.5s ease-in-out infinite;
-        }
-
-        .anim-couple {
-            animation: wind-couple 8s ease-in-out infinite;
+        /* Countdown Number Animation */
+        .countdown-num {
+            font-family: 'Playfair Display', serif;
+            color: #775a19;
+            text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
         }
 
         /* Shimmer Effect on Buttons */
@@ -121,227 +65,116 @@
             left: 100%;
             transition: all 0.6s ease-in-out;
         }
-
-        /* Responsive Text using container query width units (cqw) */
-        .text-title-script {
-            font-family: 'Alex Brush', cursive;
-            font-size: 7.2cqw;
-            color: #775a19;
-            line-height: 1.1;
-        }
-
-        .text-cursive-detail {
-            font-family: 'Alex Brush', cursive;
-            font-size: 5.5cqw;
-            color: #775a19;
-        }
-
-        .text-label-spaced {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 2cqw;
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
-            color: #172e21;
-        }
-
-        .text-parent-label {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1.7cqw;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #775a19;
-        }
-
-        .text-parent-name {
-            font-family: 'Source Serif 4', serif;
-            font-size: 2.8cqw;
-            color: #172e21;
-            font-weight: 500;
-        }
-
-        .text-body-serif {
-            font-family: 'Source Serif 4', serif;
-            font-size: 2.3cqw;
-            letter-spacing: 0.05em;
-            color: #1b1c1c;
-            line-height: 1.6;
-        }
-
-        .text-date-num {
-            font-family: 'Playfair Display', serif;
-            font-size: 6.5cqw;
-            color: #172e21;
-            font-weight: 400;
-            line-height: 1;
-        }
-
-        .text-date-lbl {
-            font-family: 'Source Serif 4', serif;
-            font-size: 2.4cqw;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #1b1c1c;
-        }
-
-        /* Smooth page scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md overflow-x-hidden min-h-screen flex flex-col relative">
+<body class="bg-background text-primary font-body-md overflow-x-hidden min-h-screen flex flex-col relative">
 
-    <!-- Global Texture Overlay -->
+    <!-- Global Paper Texture Overlay -->
     <div class="fixed inset-0 texture-overlay pointer-events-none z-[50]"></div>
 
     <!-- Main Content Area -->
     <main class="relative flex flex-col items-center justify-center min-h-screen z-10 flex-grow py-12 px-4">
         
-        <!-- Elegant Invitation Card Container -->
-        <div class="relative w-full max-w-[550px] card-container border border-[#c5a059]/20 overflow-hidden">
+        <!-- Elegant Card Container Wrapper -->
+        <div class="relative w-full max-w-[550px] bg-[#fdfdfb] p-3 rounded-2xl shadow-[0_20px_50px_rgba(23,46,33,0.12)] border border-[#c5a059]/25 transition-transform duration-700 hover:scale-[1.01] overflow-hidden">
+            <!-- Inner border frame -->
+            <div class="absolute inset-2 border border-[#172e21]/15 pointer-events-none rounded-xl"></div>
             
-            <!-- Crisp HTML Inner Border Frame -->
-            <div class="absolute inset-[3.5%] border border-[#172e21] pointer-events-none z-[2]"></div>
-
-            <!-- Layer 1: Central Card content (Text & Layout) -->
-            <div class="relative w-full h-full flex flex-col items-center pt-[7%] px-[8%] pb-[20%] z-[3] text-center select-none">
-                
-                <!-- Bismillah Calligraphy (Cropped gold SVG/PNG) -->
-                <div class="w-[36cqw] mt-[2%] mb-[2%]">
-                    <img src="bismillah.png?v=3" alt="Bismillah" class="w-full h-auto block mx-auto object-contain">
-                </div>
-
-                <!-- Invitation Tagline -->
-                <div class="text-label-spaced tracking-[0.25em] mb-[1.5%] font-medium">
-                    Together With Their Families
-                </div>
-
-                <!-- Parent Details Section -->
-                <div class="grid grid-cols-2 gap-4 w-full mt-[3%] mb-[3%] relative">
-                    <!-- Vertical Divider Dot -->
-                    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-1">
-                        <span class="w-[1.2cqw] h-[1.2cqw] rounded-full bg-[#775a19]"></span>
-                    </div>
-
-                    <!-- Bride's Parents -->
-                    <div class="pr-[6%]">
-                        <span class="text-parent-label block mb-[1.5%]">The Bride's Parents</span>
-                        <p class="text-parent-name leading-tight">Sidheek</p>
-                        <p class="text-parent-name leading-tight">Radian</p>
-                    </div>
-
-                    <!-- Groom's Parents -->
-                    <div class="pl-[6%]">
-                        <span class="text-parent-label block mb-[1.5%]">The Groom's Parents</span>
-                        <p class="text-parent-name leading-tight">Muhammad Ashraf</p>
-                        <p class="text-parent-name leading-tight">Bushra</p>
-                    </div>
-                </div>
-
-                <!-- Bride Name -->
-                <div class="mt-[2.5%]">
-                    <h2 class="text-title-script">Ayisha Sana</h2>
-                </div>
-
-                <!-- Ampersand -->
-                <div class="my-[0.5%] font-serif text-[4.5cqw] italic text-[#775a19]">&</div>
-
-                <!-- Groom Name -->
-                <div class="mb-[3.5%]">
-                    <h2 class="text-title-script">Muhammad Midlaj</h2>
-                </div>
-
-                <!-- Invitation Text -->
-                <div class="text-body-serif font-light mb-[2%]">
-                    invite you to join their<br>
-                    wedding celebration on
-                </div>
-
-                <!-- Date Layout -->
-                <div class="flex items-center justify-center w-full my-[2%] border-y border-[#172e21]/20 py-[2.5%] gap-[4%]">
-                    <!-- Left Side: Day -->
-                    <div class="w-[28cqw] text-right">
-                        <span class="text-date-lbl font-light">Sunday</span>
-                    </div>
-
-                    <!-- Middle: Date -->
-                    <div class="flex flex-col items-center justify-center border-x border-[#172e21]/30 px-[4%]">
-                        <span class="text-date-lbl font-light mb-[0.5%]">Aug</span>
-                        <span class="text-date-num font-bold">09</span>
-                        <span class="text-date-lbl font-light mt-[0.5%]">2026</span>
-                    </div>
-
-                    <!-- Right Side: Time -->
-                    <div class="w-[28cqw] text-left">
-                        <span class="text-date-lbl font-light">At 11:00 AM</span>
-                    </div>
-                </div>
-
-                <!-- Venue Info -->
-                <div class="mt-[2.5%] mb-[2%]">
-                    <p class="text-body-serif font-semibold tracking-wide text-[#172e21] uppercase text-[2.5cqw] leading-snug">
-                        Rio Convention Centre
-                    </p>
-                    <p class="text-body-serif font-light tracking-wide text-on-surface-variant/80 uppercase text-[2cqw] mt-[0.5%]">
-                        Anakkayam, Manjeri
-                    </p>
-                </div>
-
-                <!-- Reception Detail -->
-                <div class="text-cursive-detail mt-[1.5%]">
-                    Reception to follow
-                </div>
-            </div>
-
-            <!-- Layer 2: Floating Elements on Top -->
-            
-            <!-- Top-Left Leaf -->
-            <div class="absolute top-[-2%] left-[-2%] w-[42%] pointer-events-none z-[10] anim-top-left origin-top-left">
-                <img src="top_left_leaf.png?v=3" alt="Leaf Decor" class="w-full h-auto block select-none">
-            </div>
-
-            <!-- Top-Right Flowers -->
-            <div class="absolute top-[-2%] right-[-2%] w-[48%] pointer-events-none z-[10] anim-top-right origin-top-right">
-                <img src="top_right_flowers.png?v=3" alt="Flower Decor" class="w-full h-auto block select-none">
-            </div>
-
-            <!-- Bottom-Left Flowers -->
-            <div class="absolute bottom-[-2%] left-[-2%] w-[42%] pointer-events-none z-[10] anim-bottom-left origin-bottom-left">
-                <img src="bottom_left_flowers.png?v=3" alt="Flower Decor" class="w-full h-auto block select-none">
-            </div>
-
-            <!-- Bottom-Right Leaf -->
-            <div class="absolute bottom-[-1%] right-[-2%] w-[42%] pointer-events-none z-[10] anim-bottom-right origin-bottom-right">
-                <img src="bottom_right_leaf.png?v=3" alt="Leaf Decor" class="w-full h-auto block select-none">
-            </div>
-
-            <!-- Couple Illustration -->
-            <div class="absolute bottom-0 left-[50%] w-[33%] pointer-events-none z-[10] anim-couple origin-bottom">
-                <img src="couple.png?v=3" alt="Bride and Groom" class="w-full h-auto block select-none">
-            </div>
-
+            <!-- High-Resolution Invitation Image -->
+            <img src="invitation.jpg" alt="Wedding Invitation" class="w-full h-auto rounded-lg select-none block">
         </div>
 
-        <!-- Action Section (Outside the card to align with minimal layout) -->
-        <div class="mt-8 mb-12 flex flex-col items-center gap-6 w-full max-w-[550px] z-20">
-            <button id="btn-location" class="shimmer-effect bg-[#2d4436] text-white px-12 py-4 rounded-full font-button text-xs uppercase tracking-[0.25em] shadow-sm hover:bg-[#1b2b22] transition-all duration-500 hover:scale-[1.05] active:scale-95 group flex items-center gap-3" onclick="window.open('https://maps.app.goo.gl/uX3QxP6z4BfpxXyL7', '_blank')">
-                <span class="">View Location</span>
+        <!-- Rich Interactive Countdown Section -->
+        <div id="countdown-container" class="mt-10 mb-6 flex flex-col items-center w-full max-w-[500px] z-20">
+            <h3 class="font-serif italic text-sm tracking-[0.2em] uppercase text-primary/80 mb-4">
+                Days until the celebration
+            </h3>
+            
+            <div class="flex items-center justify-center gap-4 sm:gap-6">
+                <!-- Days -->
+                <div class="flex flex-col items-center justify-center bg-[#fdfdfb]/80 border border-[#c5a059]/20 w-16 h-20 sm:w-20 sm:h-24 rounded-2xl shadow-sm backdrop-blur-[2px]">
+                    <span id="days" class="countdown-num text-3xl sm:text-4xl font-bold">00</span>
+                    <span class="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-primary/60 font-medium mt-1">Days</span>
+                </div>
+                
+                <span class="text-secondary font-serif text-xl mb-6">:</span>
+
+                <!-- Hours -->
+                <div class="flex flex-col items-center justify-center bg-[#fdfdfb]/80 border border-[#c5a059]/20 w-16 h-20 sm:w-20 sm:h-24 rounded-2xl shadow-sm backdrop-blur-[2px]">
+                    <span id="hours" class="countdown-num text-3xl sm:text-4xl font-bold">00</span>
+                    <span class="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-primary/60 font-medium mt-1">Hours</span>
+                </div>
+
+                <span class="text-secondary font-serif text-xl mb-6">:</span>
+
+                <!-- Minutes -->
+                <div class="flex flex-col items-center justify-center bg-[#fdfdfb]/80 border border-[#c5a059]/20 w-16 h-20 sm:w-20 sm:h-24 rounded-2xl shadow-sm backdrop-blur-[2px]">
+                    <span id="minutes" class="countdown-num text-3xl sm:text-4xl font-bold">00</span>
+                    <span class="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-primary/60 font-medium mt-1">Mins</span>
+                </div>
+
+                <span class="text-secondary font-serif text-xl mb-6">:</span>
+
+                <!-- Seconds -->
+                <div class="flex flex-col items-center justify-center bg-[#fdfdfb]/80 border border-[#c5a059]/20 w-16 h-20 sm:w-20 sm:h-24 rounded-2xl shadow-sm backdrop-blur-[2px]">
+                    <span id="seconds" class="countdown-num text-3xl sm:text-4xl font-bold">00</span>
+                    <span class="text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-primary/60 font-medium mt-1">Secs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="mt-4 mb-8 flex flex-col items-center gap-6 w-full max-w-[550px] z-20">
+            <button id="btn-location" class="shimmer-effect bg-[#2d4436] text-white px-12 py-4 rounded-full font-semibold text-xs uppercase tracking-[0.25em] shadow-md hover:bg-[#1b2b22] transition-all duration-500 hover:scale-[1.05] active:scale-95 group flex items-center gap-3" onclick="window.open('https://www.google.com/maps/place/Rio+Convention+Centre/@11.0820685,76.12288,906m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3ba6358647ddd7af:0xd82ab11ac2d9a544!8m2!3d11.0820685!4d76.1254549!16s%2Fg%2F11fn7kg651?entry=ttu&g_ep=EgoyMDI2MDcxMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                <span>View Location</span>
                 <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">map</span>
             </button>
             <div class="flex flex-col items-center gap-2">
-                <p class="font-label-caps text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60">
+                <p class="font-medium text-[10px] tracking-[0.3em] uppercase text-primary/50">
                     RSVP by September 12th
                 </p>
-                <div class="h-[1px] w-12 bg-outline-variant/60"></div>
+                <div class="h-[1px] w-12 bg-primary/20"></div>
             </div>
         </div>
 
     </main>
 
     <!-- Footer -->
-    <footer class="w-full py-6 bg-transparent relative z-10 text-center text-xs text-on-surface-variant/40 tracking-wider">
+    <footer class="w-full py-6 bg-transparent relative z-10 text-center text-xs text-primary/40 tracking-wider">
         <p>&copy; 2026 Ayisha & Midlaj. All rights reserved.</p>
     </footer>
 
+    <!-- Countdown Timer Script -->
+    <script>
+        // Target date: August 9, 2026 at 11:00 AM (local time)
+        const targetDate = new Date('August 9, 2026 11:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                document.getElementById('countdown-container').innerHTML = `
+                    <div class="bg-[#fdfdfb]/90 border border-[#c5a059]/20 px-8 py-4 rounded-2xl shadow-sm backdrop-blur-[2px] text-center">
+                        <p class="text-[#775a19] text-base font-serif italic tracking-widest uppercase">The Wedding Day is Today!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
