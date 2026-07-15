@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:wght@400;500;600&amp;family=Source+Serif+4:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "inverse-on-surface": "#f2f0f0",
+                            "background": "#f7f6ed",
+                            "surface-dim": "#dbdad9",
+                            "surface-tint": "#4c6454",
+                            "on-primary-fixed": "#ffffff",
+                            "inverse-surface": "#303030",
+                            "on-primary-fixed-variant": "#354c3d",
+                            "on-tertiary": "#ffffff",
+                            "surface-container-highest": "#e4e2e2",
+                            "surface-variant": "#e4e2e2",
+                            "tertiary-container": "#3f3f3c",
+                            "surface-container-high": "#e9e8e7",
+                            "secondary-fixed": "#ffdea5",
+                            "secondary": "#775a19",
+                            "on-secondary-container": "#785a1a",
+                            "on-error": "#ffffff",
+                            "surface-container-lowest": "#ffffff",
+                            "on-tertiary-fixed": "#1b1c19",
+                            "outline-variant": "#c2c8c2",
+                            "primary-container": "#2d4436",
+                            "tertiary": "#292926",
+                            "surface": "#f7f6ed",
+                            "on-tertiary-fixed-variant": "#474744",
+                            "tertiary-fixed-dim": "#c8c6c2",
+                            "on-secondary": "#ffffff",
+                            "on-secondary-fixed-variant": "#5d4201",
+                            "surface-container-low": "#f5f3f3",
+                            "primary-fixed-dim": "#b3cdba",
+                            "surface-container": "#efeded",
+                            "surface-bright": "#f7f6ed",
+                            "secondary-fixed-dim": "#e9c176",
+                            "on-surface-variant": "#424843",
+                            "on-primary": "#ffffff",
+                            "secondary-container": "#fed488",
+                            "on-background": "#1b1c1c",
+                            "primary": "#172e21",
+                            "on-surface": "#1b1c1c",
+                            "on-secondary-fixed": "#261900",
+                            "primary-fixed": "#cee9d5",
+                            "on-tertiary-container": "#abaaa6",
+                            "tertiary-fixed": "#e4e2dd",
+                            "error": "#ba1a1a",
+                            "inverse-primary": "#b3cdba",
+                            "on-error-container": "#93000a",
+                            "outline": "#737973",
+                            "error-container": "#ffdad6",
+                            "on-primary-container": "#97b19f"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "stack-sm": "0.5rem",
+                            "stack-md": "1.5rem",
+                            "section-padding": "5rem",
+                            "margin-mobile": "1.5rem",
+                            "container-max": "1200px",
+                            "gutter": "2rem",
+                            "stack-lg": "3rem"
+                        },
+                        "fontFamily": {
+                            "headline-xl": ["Playfair Display"],
+                            "label-caps": ["DM Sans"],
+                            "body-lg": ["\"Source Serif 4\""],
+                            "headline-lg": ["Playfair Display"],
+                            "accent-script": ["Playfair Display"],
+                            "body-md": ["\"Source Serif 4\""],
+                            "button": ["DM Sans"]
+                        },
+                        "fontSize": {
+                            "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                            "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.15em", "fontWeight": "500"}],
+                            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                            "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                            "accent-script": ["36px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                            "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                        },
+                        "animation": {
+                            "float": "float 6s ease-in-out infinite",
+                            "shimmer": "shimmer 2s linear infinite"
+                        },
+                        "keyframes": {
+                            "float": {
+                                "0%, 100%": { transform: "translateY(0)" },
+                                "50%": { transform: "translateY(-10px)" }
+                            },
+                            "shimmer": {
+                                "0%": { "background-position": "-200% 0" },
+                                "100%": { "background-position": "200% 0" }
+                            }
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    </script>
+    <style>
+        .texture-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.4;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .shimmer-effect {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer-effect::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: all 0.6s ease-in-out;
+        }
+
+        .shimmer-effect:hover::after {
+            left: 100%;
+            transition: all 0.6s ease-in-out;
+        }
+
+        /* Smooth page scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden min-h-screen flex flex-col relative">
+<!-- Global Texture Overlay -->
+<div class="fixed inset-0 texture-overlay pointer-events-none z-[5]"></div>
+<!-- Main Content Area -->
+<main class="relative flex flex-col items-center justify-center min-h-screen z-10 flex-grow">
+<!-- Seamless Invitation Content -->
+<div class="relative w-full max-w-[1000px] flex flex-col items-center py-12">
+<!-- Integrated Image with Floating Animation -->
+<div class="relative w-full px-0 sm:px-6 md:px-12 animate-float reveal-on-scroll is-visible">
+<img alt="Wedding Invitation" class="w-full h-auto block select-none mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvlBuhxNPCwgfsk8j58MF5DrL0GW859J1JhtB6lvgSTqSu_tAYMyOXaYC87Ba-gHgLBqJohteEXl184TRwxPiVm1yaUX6FDSr7JvAbdUuDWdWK14LQ-2IJCcdpItRL6H00p0kYAZ5QVgJ49xLU2vimm2IHscAoXsYC732ILMt6fWZak0elYounbEGddyvj_p1UEOK_xA1zOoF-sf3j14rKu1DrEtgo4tP0WP4PKrTxZUqEGhkryDDVMHJgEFG14-BcLjNTTf4PnTXGmA">
+</div>
+<!-- Action Section -->
+<div class="mt-12 mb-16 flex flex-col items-center gap-8 w-full z-20 reveal-on-scroll is-visible" style="transition-delay: 200ms;">
+<button class="shimmer-effect bg-[#2d4436] text-white px-14 py-5 rounded-full font-button text-button uppercase tracking-[0.25em] shadow-sm hover:bg-[#1b2b22] transition-all duration-500 hover:scale-[1.05] active:scale-95 group flex items-center gap-4" onclick="window.open('https://maps.app.goo.gl/uX3QxP6z4BfpxXyL7', '_blank')">
+<span class="">View Location</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">map</span>
+</button>
+<div class="flex flex-col items-center gap-2 reveal-on-scroll is-visible" style="transition-delay: 400ms;">
+<p class="font-label-caps text-label-caps text-on-surface-variant/60 tracking-[0.4em] uppercase">
+                        RSVP by September 12th
+                    </p>
+<div class="h-[1px] w-12 bg-outline-variant/60"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-8 bg-transparent relative z-10">
+</footer>
+<script>
+        // Intersection Observer for Entrance Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+
+</body></html>
