@@ -3,9 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=DM+Sans:wght@400;500;600&amp;family=Source+Serif+4:wght@400;600&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <title>Wedding Invitation - Ayisha Sana & Muhammad Midlaj</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=Source+Serif+4:wght@400;600&family=Alex+Brush&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         try {
@@ -13,124 +15,82 @@
                 darkMode: "class",
                 theme: {
                     extend: {
-                        "colors": {
-                            "inverse-on-surface": "#f2f0f0",
-                            "background": "#f7f6ed",
-                            "surface-dim": "#dbdad9",
-                            "surface-tint": "#4c6454",
-                            "on-primary-fixed": "#ffffff",
-                            "inverse-surface": "#303030",
-                            "on-primary-fixed-variant": "#354c3d",
-                            "on-tertiary": "#ffffff",
-                            "surface-container-highest": "#e4e2e2",
-                            "surface-variant": "#e4e2e2",
-                            "tertiary-container": "#3f3f3c",
-                            "surface-container-high": "#e9e8e7",
-                            "secondary-fixed": "#ffdea5",
-                            "secondary": "#775a19",
-                            "on-secondary-container": "#785a1a",
-                            "on-error": "#ffffff",
-                            "surface-container-lowest": "#ffffff",
-                            "on-tertiary-fixed": "#1b1c19",
-                            "outline-variant": "#c2c8c2",
-                            "primary-container": "#2d4436",
-                            "tertiary": "#292926",
-                            "surface": "#f7f6ed",
-                            "on-tertiary-fixed-variant": "#474744",
-                            "tertiary-fixed-dim": "#c8c6c2",
-                            "on-secondary": "#ffffff",
-                            "on-secondary-fixed-variant": "#5d4201",
-                            "surface-container-low": "#f5f3f3",
-                            "primary-fixed-dim": "#b3cdba",
-                            "surface-container": "#efeded",
-                            "surface-bright": "#f7f6ed",
-                            "secondary-fixed-dim": "#e9c176",
-                            "on-surface-variant": "#424843",
-                            "on-primary": "#ffffff",
-                            "secondary-container": "#fed488",
-                            "on-background": "#1b1c1c",
-                            "primary": "#172e21",
-                            "on-surface": "#1b1c1c",
-                            "on-secondary-fixed": "#261900",
-                            "primary-fixed": "#cee9d5",
-                            "on-tertiary-container": "#abaaa6",
-                            "tertiary-fixed": "#e4e2dd",
-                            "error": "#ba1a1a",
-                            "inverse-primary": "#b3cdba",
-                            "on-error-container": "#93000a",
-                            "outline": "#737973",
-                            "error-container": "#ffdad6",
-                            "on-primary-container": "#97b19f"
-                        },
-                        "borderRadius": {
-                            "DEFAULT": "0.25rem",
-                            "lg": "0.5rem",
-                            "xl": "0.75rem",
-                            "full": "9999px"
-                        },
-                        "spacing": {
-                            "stack-sm": "0.5rem",
-                            "stack-md": "1.5rem",
-                            "section-padding": "5rem",
-                            "margin-mobile": "1.5rem",
-                            "container-max": "1200px",
-                            "gutter": "2rem",
-                            "stack-lg": "3rem"
-                        },
-                        "fontFamily": {
-                            "headline-xl": ["Playfair Display"],
-                            "label-caps": ["DM Sans"],
-                            "body-lg": ["\"Source Serif 4\""],
-                            "headline-lg": ["Playfair Display"],
-                            "accent-script": ["Playfair Display"],
-                            "body-md": ["\"Source Serif 4\""],
-                            "button": ["DM Sans"]
-                        },
-                        "fontSize": {
-                            "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                            "label-caps": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.15em", "fontWeight": "500"}],
-                            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                            "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
-                            "accent-script": ["36px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                            "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
-                        },
-                        "animation": {
-                            "float": "float 6s ease-in-out infinite",
-                            "shimmer": "shimmer 2s linear infinite"
-                        },
-                        "keyframes": {
-                            "float": {
-                                "0%, 100%": { transform: "translateY(0)" },
-                                "50%": { transform: "translateY(-10px)" }
-                            },
-                            "shimmer": {
-                                "0%": { "background-position": "-200% 0" },
-                                "100%": { "background-position": "200% 0" }
-                            }
+                        colors: {
+                            "primary": "#172e21",      /* Forest Noir */
+                            "secondary": "#775a19",    /* Champagne Gold */
+                            "background": "#f7f6ed",   /* Clarity Cream */
                         }
-                    },
-                },
+                    }
+                }
             }
         } catch (_e) {}
     </script>
     <style>
+        /* Global Texture Overlay */
         .texture-overlay {
             background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-            opacity: 0.4;
+            opacity: 0.35;
         }
 
-        .reveal-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        /* Container Queries Setup */
+        .card-container {
+            container-type: inline-size;
+            position: relative;
+            background-image: url('invitation_bg.png');
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 730 / 1024;
+            box-shadow: 0 20px 40px rgba(23, 46, 33, 0.08);
         }
 
-        .reveal-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+        /* Floating Element Keyframe Animations */
+        @keyframes float-top-left {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-3px, -5px) rotate(-0.5deg); }
         }
 
+        @keyframes float-top-right {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(4px, -3px) rotate(0.5deg); }
+        }
+
+        @keyframes float-bottom-left {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-4px, 4px) rotate(-0.5deg); }
+        }
+
+        @keyframes float-bottom-right {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(3px, 5px) rotate(0.8deg); }
+        }
+
+        @keyframes float-couple {
+            0%, 100% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, -5px); }
+        }
+
+        /* Apply Animations */
+        .anim-top-left {
+            animation: float-top-left 7s ease-in-out infinite;
+        }
+
+        .anim-top-right {
+            animation: float-top-right 8s ease-in-out infinite;
+        }
+
+        .anim-bottom-left {
+            animation: float-bottom-left 9s ease-in-out infinite;
+        }
+
+        .anim-bottom-right {
+            animation: float-bottom-right 7.5s ease-in-out infinite;
+        }
+
+        .anim-couple {
+            animation: float-couple 6s ease-in-out infinite;
+        }
+
+        /* Shimmer Effect on Buttons */
         .shimmer-effect {
             position: relative;
             overflow: hidden;
@@ -157,6 +117,67 @@
             transition: all 0.6s ease-in-out;
         }
 
+        /* Responsive Text using container query width units (cqw) */
+        .text-title-script {
+            font-family: 'Alex Brush', cursive;
+            font-size: 7.2cqw;
+            color: #775a19;
+            line-height: 1.1;
+        }
+
+        .text-cursive-detail {
+            font-family: 'Alex Brush', cursive;
+            font-size: 5.5cqw;
+            color: #775a19;
+        }
+
+        .text-label-spaced {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2cqw;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #172e21;
+        }
+
+        .text-parent-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.7cqw;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #775a19;
+        }
+
+        .text-parent-name {
+            font-family: 'Source Serif 4', serif;
+            font-size: 2.8cqw;
+            color: #172e21;
+            font-weight: 500;
+        }
+
+        .text-body-serif {
+            font-family: 'Source Serif 4', serif;
+            font-size: 2.3cqw;
+            letter-spacing: 0.05em;
+            color: #1b1c1c;
+            line-height: 1.6;
+        }
+
+        .text-date-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 6.5cqw;
+            color: #172e21;
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .text-date-lbl {
+            font-family: 'Source Serif 4', serif;
+            font-size: 2.4cqw;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #1b1c1c;
+        }
+
         /* Smooth page scrolling */
         html {
             scroll-behavior: smooth;
@@ -164,56 +185,158 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden min-h-screen flex flex-col relative">
-<!-- Global Texture Overlay -->
-<div class="fixed inset-0 texture-overlay pointer-events-none z-[5]"></div>
-<!-- Main Content Area -->
-<main class="relative flex flex-col items-center justify-center min-h-screen z-10 flex-grow">
-<!-- Seamless Invitation Content -->
-<div class="relative w-full max-w-[1000px] flex flex-col items-center py-12">
-<!-- Integrated Image with Floating Animation -->
-<div class="relative w-full px-0 sm:px-6 md:px-12 animate-float reveal-on-scroll is-visible">
-<img alt="Wedding Invitation" class="w-full h-auto block select-none mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvlBuhxNPCwgfsk8j58MF5DrL0GW859J1JhtB6lvgSTqSu_tAYMyOXaYC87Ba-gHgLBqJohteEXl184TRwxPiVm1yaUX6FDSr7JvAbdUuDWdWK14LQ-2IJCcdpItRL6H00p0kYAZ5QVgJ49xLU2vimm2IHscAoXsYC732ILMt6fWZak0elYounbEGddyvj_p1UEOK_xA1zOoF-sf3j14rKu1DrEtgo4tP0WP4PKrTxZUqEGhkryDDVMHJgEFG14-BcLjNTTf4PnTXGmA">
-</div>
-<!-- Action Section -->
-<div class="mt-12 mb-16 flex flex-col items-center gap-8 w-full z-20 reveal-on-scroll is-visible" style="transition-delay: 200ms;">
-<button class="shimmer-effect bg-[#2d4436] text-white px-14 py-5 rounded-full font-button text-button uppercase tracking-[0.25em] shadow-sm hover:bg-[#1b2b22] transition-all duration-500 hover:scale-[1.05] active:scale-95 group flex items-center gap-4" onclick="window.open('https://maps.app.goo.gl/uX3QxP6z4BfpxXyL7', '_blank')">
-<span class="">View Location</span>
-<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">map</span>
-</button>
-<div class="flex flex-col items-center gap-2 reveal-on-scroll is-visible" style="transition-delay: 400ms;">
-<p class="font-label-caps text-label-caps text-on-surface-variant/60 tracking-[0.4em] uppercase">
-                        RSVP by September 12th
+
+    <!-- Global Texture Overlay -->
+    <div class="fixed inset-0 texture-overlay pointer-events-none z-[50]"></div>
+
+    <!-- Main Content Area -->
+    <main class="relative flex flex-col items-center justify-center min-h-screen z-10 flex-grow py-12 px-4">
+        
+        <!-- Elegant Invitation Card Container -->
+        <div class="relative w-full max-w-[550px] card-container border border-[#c5a059]/20 overflow-hidden">
+            
+            <!-- Crisp HTML Inner Border Frame -->
+            <div class="absolute inset-[3.5%] border border-[#172e21] pointer-events-none z-[2]"></div>
+
+            <!-- Layer 1: Central Card content (Text & Layout) -->
+            <div class="relative w-full h-full flex flex-col items-center pt-[7%] px-[8%] pb-[20%] z-[3] text-center select-none">
+                
+                <!-- Bismillah Calligraphy (Cropped gold SVG/PNG) -->
+                <div class="w-[36cqw] mt-[2%] mb-[2%]">
+                    <img src="bismillah.png" alt="Bismillah" class="w-full h-auto block mx-auto object-contain">
+                </div>
+
+                <!-- Invitation Tagline -->
+                <div class="text-label-spaced tracking-[0.25em] mb-[1.5%] font-medium">
+                    Together With Their Families
+                </div>
+
+                <!-- Parent Details Section -->
+                <div class="grid grid-cols-2 gap-4 w-full mt-[3%] mb-[3%] relative">
+                    <!-- Vertical Divider Dot -->
+                    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-1">
+                        <span class="w-[1.2cqw] h-[1.2cqw] rounded-full bg-[#775a19]"></span>
+                    </div>
+
+                    <!-- Bride's Parents -->
+                    <div class="pr-[6%]">
+                        <span class="text-parent-label block mb-[1.5%]">The Bride's Parents</span>
+                        <p class="text-parent-name leading-tight">Sidheek</p>
+                        <p class="text-parent-name leading-tight">Radian</p>
+                    </div>
+
+                    <!-- Groom's Parents -->
+                    <div class="pl-[6%]">
+                        <span class="text-parent-label block mb-[1.5%]">The Groom's Parents</span>
+                        <p class="text-parent-name leading-tight">Muhammad Ashraf</p>
+                        <p class="text-parent-name leading-tight">Bushra</p>
+                    </div>
+                </div>
+
+                <!-- Bride Name -->
+                <div class="mt-[2.5%]">
+                    <h2 class="text-title-script">Ayisha Sana</h2>
+                </div>
+
+                <!-- Ampersand -->
+                <div class="my-[0.5%] font-serif text-[4.5cqw] italic text-[#775a19]">&</div>
+
+                <!-- Groom Name -->
+                <div class="mb-[3.5%]">
+                    <h2 class="text-title-script">Muhammad Midlaj</h2>
+                </div>
+
+                <!-- Invitation Text -->
+                <div class="text-body-serif font-light mb-[2%]">
+                    invite you to join their<br>
+                    wedding celebration on
+                </div>
+
+                <!-- Date Layout -->
+                <div class="flex items-center justify-center w-full my-[2%] border-y border-[#172e21]/20 py-[2.5%] gap-[4%]">
+                    <!-- Left Side: Day -->
+                    <div class="w-[28cqw] text-right">
+                        <span class="text-date-lbl font-light">Sunday</span>
+                    </div>
+
+                    <!-- Middle: Date -->
+                    <div class="flex flex-col items-center justify-center border-x border-[#172e21]/30 px-[4%]">
+                        <span class="text-date-lbl font-light mb-[0.5%]">Aug</span>
+                        <span class="text-date-num font-bold">09</span>
+                        <span class="text-date-lbl font-light mt-[0.5%]">2026</span>
+                    </div>
+
+                    <!-- Right Side: Time -->
+                    <div class="w-[28cqw] text-left">
+                        <span class="text-date-lbl font-light">At 11:00 AM</span>
+                    </div>
+                </div>
+
+                <!-- Venue Info -->
+                <div class="mt-[2.5%] mb-[2%]">
+                    <p class="text-body-serif font-semibold tracking-wide text-[#172e21] uppercase text-[2.5cqw] leading-snug">
+                        Rio Convention Centre
                     </p>
-<div class="h-[1px] w-12 bg-outline-variant/60"></div>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer Shell -->
-<footer class="w-full py-8 bg-transparent relative z-10">
-</footer>
-<script>
-        // Intersection Observer for Entrance Animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+                    <p class="text-body-serif font-light tracking-wide text-on-surface-variant/80 uppercase text-[2cqw] mt-[0.5%]">
+                        Anakkayam, Manjeri
+                    </p>
+                </div>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, observerOptions);
+                <!-- Reception Detail -->
+                <div class="text-cursive-detail mt-[1.5%]">
+                    Reception to follow
+                </div>
+            </div>
 
-            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-                observer.observe(el);
-            });
-        });
-    </script>
+            <!-- Layer 2: Floating Elements on Top -->
+            
+            <!-- Top-Left Leaf -->
+            <div class="absolute top-[-2%] left-[-2%] w-[42%] pointer-events-none z-[10] anim-top-left origin-top-left">
+                <img src="top_left_leaf.png" alt="Leaf Decor" class="w-full h-auto block select-none">
+            </div>
 
+            <!-- Top-Right Flowers -->
+            <div class="absolute top-[-2%] right-[-2%] w-[48%] pointer-events-none z-[10] anim-top-right origin-top-right">
+                <img src="top_right_flowers.png" alt="Flower Decor" class="w-full h-auto block select-none">
+            </div>
 
-</body></html>
+            <!-- Bottom-Left Flowers -->
+            <div class="absolute bottom-[-2%] left-[-2%] w-[42%] pointer-events-none z-[10] anim-bottom-left origin-bottom-left">
+                <img src="bottom_left_flowers.png" alt="Flower Decor" class="w-full h-auto block select-none">
+            </div>
+
+            <!-- Bottom-Right Leaf -->
+            <div class="absolute bottom-[-1%] right-[-2%] w-[42%] pointer-events-none z-[10] anim-bottom-right origin-bottom-right">
+                <img src="bottom_right_leaf.png" alt="Leaf Decor" class="w-full h-auto block select-none">
+            </div>
+
+            <!-- Couple Illustration -->
+            <div class="absolute bottom-0 left-[50%] w-[33%] pointer-events-none z-[10] anim-couple origin-bottom">
+                <img src="couple.png" alt="Bride and Groom" class="w-full h-auto block select-none">
+            </div>
+
+        </div>
+
+        <!-- Action Section (Outside the card to align with minimal layout) -->
+        <div class="mt-8 mb-12 flex flex-col items-center gap-6 w-full max-w-[550px] z-20">
+            <button id="btn-location" class="shimmer-effect bg-[#2d4436] text-white px-12 py-4 rounded-full font-button text-xs uppercase tracking-[0.25em] shadow-sm hover:bg-[#1b2b22] transition-all duration-500 hover:scale-[1.05] active:scale-95 group flex items-center gap-3" onclick="window.open('https://maps.app.goo.gl/uX3QxP6z4BfpxXyL7', '_blank')">
+                <span class="">View Location</span>
+                <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">map</span>
+            </button>
+            <div class="flex flex-col items-center gap-2">
+                <p class="font-label-caps text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/60">
+                    RSVP by September 12th
+                </p>
+                <div class="h-[1px] w-12 bg-outline-variant/60"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 bg-transparent relative z-10 text-center text-xs text-on-surface-variant/40 tracking-wider">
+        <p>&copy; 2026 Ayisha & Midlaj. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
