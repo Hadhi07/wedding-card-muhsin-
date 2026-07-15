@@ -65,6 +65,19 @@
             left: 100%;
             transition: all 0.6s ease-in-out;
         }
+
+        /* Couple Sway Animation */
+        @keyframes couple-sway {
+            0%, 75%, 100% { transform: translate(-50%, 0); }
+            80% { transform: translate(-53%, 0); } /* sway left quickly */
+            85% { transform: translate(-50%, 0); } /* brief pause in middle */
+            90% { transform: translate(-47%, 0); } /* sway right quickly */
+            95% { transform: translate(-50%, 0); } /* back to middle */
+        }
+
+        .anim-couple {
+            animation: couple-sway 7s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-background text-primary font-body-md overflow-x-hidden min-h-screen flex flex-col relative">
@@ -80,8 +93,16 @@
             <!-- Inner border frame -->
             <div class="absolute inset-2 border border-[#172e21]/15 pointer-events-none rounded-xl"></div>
             
-            <!-- High-Resolution Invitation Image -->
-            <img src="invitation.jpg" alt="Wedding Invitation" class="w-full h-auto rounded-lg select-none block">
+            <!-- Inner Relative Container to wrap the image and absolute overlays perfectly -->
+            <div class="relative w-full">
+                <!-- High-Resolution Invitation Image (with couple removed) -->
+                <img src="invitation_bg.jpg" alt="Wedding Invitation" class="w-full h-auto rounded-lg select-none block">
+
+                <!-- Floating Couple Overlay at the bottom center -->
+                <div class="absolute bottom-0 left-[50%] w-[36%] pointer-events-none z-[10] anim-couple origin-bottom">
+                    <img src="couple.png?v=4" alt="Bride and Groom" class="w-full h-auto block select-none">
+                </div>
+            </div>
         </div>
 
         <!-- Rich Interactive Countdown Section -->
@@ -131,7 +152,7 @@
             </button>
             <div class="flex flex-col items-center gap-2">
                 <p class="font-medium text-[10px] tracking-[0.3em] uppercase text-primary/50">
-                    RSVP by September 12th
+                    RSVP by July 26th
                 </p>
                 <div class="h-[1px] w-12 bg-primary/20"></div>
             </div>
