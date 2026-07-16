@@ -66,29 +66,25 @@
             transition: all 0.6s ease-in-out;
         }
 
-        /* Wind Sway / Breeze Keyframe Animations */
+        /* Wind Sway / Breeze Keyframe Animations (Ultra-subtle breathing wiggles to avoid ghosting) */
         @keyframes wind-top-left {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(-6px, 3px) rotate(-1.5deg); }
-            66% { transform: translate(2px, -2px) rotate(0.8deg); }
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.008) rotate(-0.4deg); }
         }
 
         @keyframes wind-top-right {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            40% { transform: translate(5px, -4px) rotate(1.2deg); }
-            75% { transform: translate(-3px, 1.5px) rotate(-0.8deg); }
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.01) rotate(0.3deg); }
         }
 
         @keyframes wind-bottom-left {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            30% { transform: translate(-4px, 5px) rotate(-1.2deg); }
-            70% { transform: translate(3px, -2px) rotate(1deg); }
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.008) rotate(-0.3deg); }
         }
 
         @keyframes wind-bottom-right {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            45% { transform: translate(6px, 4px) rotate(1.8deg); }
-            80% { transform: translate(-2px, -1.5px) rotate(-0.8deg); }
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.01) rotate(0.4deg); }
         }
 
         /* Couple Sway Animation */
@@ -138,36 +134,36 @@
             <!-- Inner Relative Container to wrap the image and absolute overlays perfectly -->
             <div class="relative w-full">
                 <!-- High-Resolution Invitation Image (with overlays removed) -->
-                <img src="invitation_bg.jpg?v=6" alt="Wedding Invitation" class="w-full h-auto rounded-lg select-none block">
+                <img src="invitation_bg.jpg?v=7" alt="Wedding Invitation" class="w-full h-auto rounded-lg select-none block">
 
                 <!-- Bismillah Calligraphy Overlay -->
                 <div class="absolute top-[3.5%] left-[50%] w-[32%] -translate-x-1/2 pointer-events-none z-[10]">
-                    <img src="bismillah.png?v=6" alt="Bismillah" class="w-full h-auto block select-none">
+                    <img src="bismillah.png?v=7" alt="Bismillah" class="w-full h-auto block select-none">
                 </div>
 
                 <!-- Floating Top-Left Leaf -->
                 <div class="absolute top-0 left-0 w-[45%] pointer-events-none z-[10] anim-top-left origin-top-left">
-                    <img src="top_left_leaf.png?v=6" alt="Leaf Decor" class="w-full h-auto block select-none">
+                    <img src="top_left_leaf.png?v=7" alt="Leaf Decor" class="w-full h-auto block select-none">
                 </div>
 
                 <!-- Floating Top-Right Flowers -->
                 <div class="absolute top-0 right-0 w-[52%] pointer-events-none z-[10] anim-top-right origin-top-right">
-                    <img src="top_right_flowers.png?v=6" alt="Flower Decor" class="w-full h-auto block select-none">
+                    <img src="top_right_flowers.png?v=7" alt="Flower Decor" class="w-full h-auto block select-none">
                 </div>
 
                 <!-- Floating Bottom-Left Flowers -->
                 <div class="absolute bottom-0 left-0 w-[45%] pointer-events-none z-[10] anim-bottom-left origin-bottom-left">
-                    <img src="bottom_left_flowers.png?v=6" alt="Flower Decor" class="w-full h-auto block select-none">
+                    <img src="bottom_left_flowers.png?v=7" alt="Flower Decor" class="w-full h-auto block select-none">
                 </div>
 
                 <!-- Floating Bottom-Right Leaf -->
                 <div class="absolute bottom-0 right-0 w-[50%] pointer-events-none z-[10] anim-bottom-right origin-bottom-right">
-                    <img src="bottom_right_leaf.png?v=6" alt="Leaf Decor" class="w-full h-auto block select-none">
+                    <img src="bottom_right_leaf.png?v=7" alt="Leaf Decor" class="w-full h-auto block select-none">
                 </div>
 
                 <!-- Floating Couple Overlay at the bottom center -->
                 <div class="absolute bottom-0 left-[50%] w-[36%] pointer-events-none z-[10] anim-couple origin-bottom">
-                    <img src="couple.png?v=6" alt="Bride and Groom" class="w-full h-auto block select-none">
+                    <img src="couple.png?v=7" alt="Bride and Groom" class="w-full h-auto block select-none">
                 </div>
             </div>
         </div>
