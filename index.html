@@ -66,27 +66,6 @@
             transition: all 0.6s ease-in-out;
         }
 
-        /* Wind Sway / Breeze Keyframe Animations (Visible sway with anchored corners) */
-        @keyframes wind-top-left {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.015) rotate(-1.5deg); }
-        }
-
-        @keyframes wind-top-right {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.018) rotate(1.2deg); }
-        }
-
-        @keyframes wind-bottom-left {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.015) rotate(-1.2deg); }
-        }
-
-        @keyframes wind-bottom-right {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.018) rotate(1.5deg); }
-        }
-
         /* Couple Sway Animation */
         @keyframes couple-sway {
             0%, 75%, 100% { transform: translate(-50%, 0); }
@@ -94,27 +73,6 @@
             85% { transform: translate(-50%, 0); } /* brief pause in middle */
             90% { transform: translate(-47%, 0); } /* sway right quickly */
             95% { transform: translate(-50%, 0); } /* back to middle */
-        }
-
-        /* Apply Animations with Organic Durations, Offsets and Explicit Origins */
-        .anim-top-left {
-            animation: wind-top-left 10s ease-in-out infinite;
-            transform-origin: top left;
-        }
-
-        .anim-top-right {
-            animation: wind-top-right 12s ease-in-out infinite;
-            transform-origin: top right;
-        }
-
-        .anim-bottom-left {
-            animation: wind-bottom-left 11s ease-in-out infinite;
-            transform-origin: bottom left;
-        }
-
-        .anim-bottom-right {
-            animation: wind-bottom-right 9.5s ease-in-out infinite;
-            transform-origin: bottom right;
         }
 
         .anim-couple {
@@ -135,41 +93,8 @@
             <!-- Inner border frame -->
             <div class="absolute inset-2 border border-[#172e21]/15 pointer-events-none rounded-xl"></div>
             
-            <!-- Inner Relative Container to wrap the image and absolute overlays perfectly -->
-            <div class="relative w-full">
-                <!-- High-Resolution Invitation Image (with overlays removed) -->
-                <img src="invitation_bg.jpg?v=8" alt="Wedding Invitation" class="w-full h-auto rounded-lg select-none block">
-
-                <!-- Bismillah Calligraphy Overlay -->
-                <div class="absolute top-[3.5%] left-[50%] w-[32%] -translate-x-1/2 pointer-events-none z-[10]">
-                    <img src="bismillah.png?v=8" alt="Bismillah" class="w-full h-auto block select-none">
-                </div>
-
-                <!-- Floating Top-Left Leaf -->
-                <div class="absolute top-0 left-0 w-[45%] pointer-events-none z-[10] anim-top-left origin-top-left">
-                    <img src="top_left_leaf.png?v=8" alt="Leaf Decor" class="w-full h-auto block select-none">
-                </div>
-
-                <!-- Floating Top-Right Flowers -->
-                <div class="absolute top-0 right-0 w-[52%] pointer-events-none z-[10] anim-top-right origin-top-right">
-                    <img src="top_right_flowers.png?v=8" alt="Flower Decor" class="w-full h-auto block select-none">
-                </div>
-
-                <!-- Floating Bottom-Left Flowers -->
-                <div class="absolute bottom-0 left-0 w-[45%] pointer-events-none z-[10] anim-bottom-left origin-bottom-left">
-                    <img src="bottom_left_flowers.png?v=8" alt="Flower Decor" class="w-full h-auto block select-none">
-                </div>
-
-                <!-- Floating Bottom-Right Leaf -->
-                <div class="absolute bottom-0 right-0 w-[50%] pointer-events-none z-[10] anim-bottom-right origin-bottom-right">
-                    <img src="bottom_right_leaf.png?v=8" alt="Leaf Decor" class="w-full h-auto block select-none">
-                </div>
-
-                <!-- Floating Couple Overlay at the bottom center -->
-                <div class="absolute bottom-0 left-[50%] w-[36%] pointer-events-none z-[10] anim-couple origin-bottom">
-                    <img src="couple.png?v=8" alt="Bride and Groom" class="w-full h-auto block select-none">
-                </div>
-            </div>
+            <!-- High-Resolution Invitation Image -->
+            <img src="invitation.jpg?v=9" alt="Wedding Invitation" class="w-full h-auto rounded-lg select-none block">
         </div>
 
         <!-- Rich Interactive Countdown Section -->
